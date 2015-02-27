@@ -26,14 +26,19 @@ public class InputReader
      *
      * @return  A String typed by the user.
      */
-    public String getInput()
+    public HashSet getInput()
     {
         System.out.print("> ");         // print prompt
         String inputLine = reader.nextLine();
-        
-        String pregunta[] = inputLine.split(" ");
-        String responder = pregunta[0];
-        
-        return responder;
+
+        //String pregunta[] = inputLine.split(" ");
+        //String responder = pregunta[0];
+
+        HashSet <String> numero = new HashSet();
+        String [] arrayCad = inputLine.split(" ");
+        for (int i = 0; i < arrayCad.length; i++) {
+            numero.add(arrayCad[i]);
+        }
+        return numero;
     }
 }
